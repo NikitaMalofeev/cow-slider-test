@@ -1,5 +1,23 @@
 .slider {
     width: 100%;
+    background-color: rgb(224, 224, 224);
+    height: 100%;
+    padding: 0 20px;
+
+    &__head {
+        padding: 20px 0;
+        font-size: 40px;
+        font-weight: 700;
+        color: rgb(78, 83, 100);
+    }
+    &__description {
+        display: inline-block;
+        max-width: 50%;
+        font-size: 24px;
+        color: rgb(78, 83, 100);
+        padding-bottom: 20px;
+    }
+
     &__list {
         width: 100%;
         display: flex; /* Используем flex вместо grid для горизонтального расположения элементов */
@@ -22,8 +40,37 @@
         object-fit: cover; /* Заполняем область img внутри блока */
     }
 
+    &__title {
+        color: rgb(78, 83, 100);
+        font-weight: 600;
+    }
+
+    &__date {
+        color: rgb(78, 83, 100);
+        padding: 10px 0;
+    }
+
     &__controllers {
         display: flex;
         justify-content: space-between;
+        padding: 20px 5%;
+    }
+
+    &__arrow_right {
+        background-color: rgb(224, 224, 224);
+        border: none;
+    }
+
+    &__arrow_left {
+        background-color: rgb(224, 224, 224);
+        border: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .slider {
+        &__item {
+            max-width: 344px;
+        }
     }
 }
