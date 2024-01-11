@@ -136,48 +136,48 @@ function Slider() {
                     ))}
                     <div style={{ width: '200px' }}></div>
                 </div>
-            </div>
-            <div className={styles.slider__controllers}>
-                <button
-                    className={styles.slider__arrow_left}
-                    onClick={() => slideAction('left')}
-                >
-                    {mobileScreen ? (
-                        <Image
-                            src={smallArrowLeft}
-                            alt=""
-                            width={100}
-                            height={20}
-                        />
-                    ) : (
-                        <Image
-                            src={arrowLeft}
-                            alt=""
-                            width={100}
-                            height={20}
-                        />
-                    )}
-                </button>
-                <button
-                    className={styles.slider__arrow_right}
-                    onClick={() => slideAction('right')}
-                >
-                    {mobileScreen ? (
-                        <Image
-                            src={smallArrowRight}
-                            alt=""
-                            width={100}
-                            height={20}
-                        />
-                    ) : (
-                        <Image
-                            src={arrowRight}
-                            alt=""
-                            width={100}
-                            height={20}
-                        />
-                    )}
-                </button>
+                <div className={styles.slider__controllers}>
+                    <button
+                        className={styles.slider__arrow_left}
+                        onClick={() => slideAction('left')}
+                    >
+                        {mobileScreen ? (
+                            <Image
+                                src={smallArrowLeft}
+                                alt=""
+                                width={100}
+                                height={20}
+                            />
+                        ) : (
+                            <Image
+                                src={arrowLeft}
+                                alt=""
+                                width={100}
+                                height={20}
+                            />
+                        )}
+                    </button>
+                    <button
+                        className={styles.slider__arrow_right}
+                        onClick={() => slideAction('right')}
+                    >
+                        {mobileScreen ? (
+                            <Image
+                                src={smallArrowRight}
+                                alt=""
+                                width={100}
+                                height={20}
+                            />
+                        ) : (
+                            <Image
+                                src={arrowRight}
+                                alt=""
+                                width={100}
+                                height={20}
+                            />
+                        )}
+                    </button>
+                </div>
             </div>
         </div>
     );
