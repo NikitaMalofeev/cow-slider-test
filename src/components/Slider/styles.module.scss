@@ -1,0 +1,29 @@
+.slider {
+    width: 100%;
+    &__list {
+        width: 100%;
+        display: flex; /* Используем flex вместо grid для горизонтального расположения элементов */
+        overflow-x: auto; /* Используем overflow-x: auto для создания горизонтального скролла */
+        scroll-snap-type: x mandatory; /* Включаем привязку к скроллу по горизонтали */
+        scroll-behavior: smooth; /* Добавляем плавный скролл */
+        padding: 0 20px;
+    }
+
+    &__item {
+        max-width: 688px;
+        flex: 0 0 auto; /* Задаем фиксированную ширину для элемента */
+        scroll-snap-align: center; /* Привязываем элементы к центру при скролле */
+        margin-right: 16px; /* Добавляем отступ между элементами, если нужно */
+    }
+
+    &__item img {
+        max-width: 100%; /* Максимальная ширина изображения внутри элемента */
+        border-radius: 220px 0 220px 0; /* Радиус скругления углов */
+        object-fit: cover; /* Заполняем область img внутри блока */
+    }
+
+    &__controllers {
+        display: flex;
+        justify-content: space-between;
+    }
+}
